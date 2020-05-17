@@ -1,6 +1,7 @@
 # PostgreSQL GitHub Action
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Daniel-Marynicz/postgresql-action/blob/master/LICENSE)
+![.github/workflows/test.yml](https://github.com/Daniel-Marynicz/postgresql-action/workflows/.github/workflows/test.yml/badge.svg)
 
 Setups PostgreSQL database  with unprivileged postgres user and PostgreSQL extensions.
 
