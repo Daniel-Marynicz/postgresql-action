@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eo pipefail
 
@@ -17,4 +17,21 @@ SERVICE_ID=$(docker run \
   --detach \
   ${IMAGE_ID})
 
-docker logs ${SERVICE_ID}
+retry=0
+function waitUntilHealthy() {
+    SHORT_ID=$(docker ps --filter "health=healthy" --filter "id=${SERVICE_ID}" --quiet)
+    if [[ -z "$SHORT_ID" ]] ;
+    then
+        ((retry=retry+1))
+        if [[ ${retry} < 10 ]] ; then
+            sleep 1
+            waitUntilHealthy
+        fi
+    fi
+}
+waitUntilHealthy
+
+sleep 2
+
+docker logs "$SERVICE_ID"
+

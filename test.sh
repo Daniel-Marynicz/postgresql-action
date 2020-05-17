@@ -1,6 +1,6 @@
 
 docker build -t test .
-set -x
+
 INPUT_POSTGRES_USER=postgres
 INPUT_POSTGRES_DB=postgres
 INPUT_POSTGRES_PASSWORD=postgres
