@@ -1,0 +1,44 @@
+name: 'PostgreSQL'
+description: 'Setup a PostgreSQL database'
+author: 'Daniel Marynicz'
+branding:
+  icon: 'database'
+  color: 'blue'
+inputs:
+  postgres_image_tag:
+    required: false
+    description: 'Docker postgres image tag for available image tags please see https://hub.docker.com/_/postgres'
+    default: 'latest'
+  postgres_user:
+    description: 'POSTGRES_USER - create the user with the superuser power'
+    required: false
+    default: 'postgres'
+  postgres_db:
+    description: 'POSTGRES_DB - postgres database'
+    required: false
+    default: 'postgres'
+  postgres_password:
+    description: 'POSTGRES_PASSWORD - superuser password'
+    required: false
+  postgres_extensions:
+    required: false
+    description: 'POSTGRES_EXTENSIONS - List of postgres extensions separated by space to install in template1 database'
+  app_user:
+    required: false
+    description: 'APP_USER - unprivileged postgres user'
+    default: 'app'
+  app_user_password:
+    required: false
+    description: 'APP_PASSWORD_USER - password for unprivileged postgres user'
+    default: 'app'
+  app_db:
+    required: false
+    description: 'APP_DB - database or list of databases separated by space for unprivileged postgres user'
+    default: 'app'
+  exposed_postgres_port:
+    required: false
+    description: 'EXPOSED_POSTGRES_PORT - exposed postgres port'
+    default: '5432'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
