@@ -1,5 +1,5 @@
-name: 'PostgreSQL'
-description: 'Setup a PostgreSQL database'
+name: 'Setup PostgreSQL with PostgreSQL extensions and unprivileged user'
+description: 'Setups PostgreSQL database with unprivileged postgres user and PostgreSQL extensions.'
 author: 'Daniel Marynicz'
 branding:
   icon: 'database'
