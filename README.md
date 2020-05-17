@@ -66,6 +66,6 @@ Setups PostgreSQL database  with unprivileged postgres user and PostgreSQL exten
     app_user: app
     app_user_password: develop
     app_db: app app2 app3 app4
-
+    postgres_extensions: uuid-ossp ltree    
 ```
 
