@@ -12,7 +12,7 @@ do
   psql -v ON_ERROR_STOP=1 \
       --dbname "$db" \
       --username="$user" <<-EOSQL
-      CREATE DATABASE ${database} OWNER ${app_user};
+      CREATE DATABASE "${database}" OWNER ${app_user};
 EOSQL
 done
 
