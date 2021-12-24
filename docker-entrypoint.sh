@@ -3,7 +3,7 @@
 set -eo pipefail
 
 cd /docker
-IMAGE_ID=$(docker build --quiet --build-arg INPUT_POSTGRES_IMAGE_TAG="$INPUT_POSTGRES_IMAGE_TAG" .)
+IMAGE_ID=$(docker build --quiet --build-arg INPUT_POSTGRES_IMAGE_TAG="$INPUT_POSTGRES_IMAGE_TAG" --build-arg INPUT_POSTGRES_IMAGE_NAME="$INPUT_POSTGRES_IMAGE_NAME" .)
 
 SERVICE_ID=$(docker run \
   -e POSTGRES_USER="${INPUT_POSTGRES_USER:-postgres}" \
