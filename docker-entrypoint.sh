@@ -32,6 +32,4 @@ function waitUntilHealthy() {
 waitUntilHealthy
 
 sleep 2
-
 docker logs "$SERVICE_ID"
-
