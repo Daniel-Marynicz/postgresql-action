@@ -34,6 +34,10 @@ waitUntilHealthy
 sleep 2
 echo "sdsad"
 docker logs "$SERVICE_ID"
+sleep 10
+docker ps -a
+echo $SERVICE_ID
+docker logs "$SERVICE_ID"
 waitUntilHealthy
 
 docker ps -a
