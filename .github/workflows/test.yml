@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Postgres database
-        uses: Daniel-Marynicz/postgresql-action@master
+        uses: Daniel-Marynicz/postgresql-action@fix
         with:
           postgres_image_tag: 12-alpine
           app_user: app
