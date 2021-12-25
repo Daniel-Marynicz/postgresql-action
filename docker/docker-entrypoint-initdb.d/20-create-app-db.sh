@@ -7,7 +7,11 @@ set -eo pipefail
 readarray -td" " databases <<<"$app_db"
 
 set -x
-
+for database in "${databases[@]}"
+do
+  echo $database
+  echo "${database}"
+done
 for database in "${databases[@]}"
 do
   psql -v ON_ERROR_STOP=1 \
