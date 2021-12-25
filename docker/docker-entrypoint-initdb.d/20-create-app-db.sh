@@ -10,7 +10,7 @@ set -x
 for database in "${databases[@]}"
 do
   echo $database
-  echo "${database}"
+  echo "${database}-a"
 done
 for database in "${databases[@]}"
 do
