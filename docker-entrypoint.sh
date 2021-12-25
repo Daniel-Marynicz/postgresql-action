@@ -35,3 +35,4 @@ sleep 2
 echo "sdsad"
 docker logs "$SERVICE_ID"
 
+docker ps -a
