@@ -14,7 +14,7 @@ do
 done
 for database in "${databases[@]}"
 do
-  database = $(echo "${database}" | xargs)
+  database=$(echo "${database}" | xargs)
   psql -v ON_ERROR_STOP=1 \
       --dbname "$db" \
       --username="$user" <<-EOSQL
