@@ -6,12 +6,6 @@ set -eo pipefail
 
 readarray -td" " databases <<<"$app_db"
 
-set -x
-for database in "${databases[@]}"
-do
-  echo $database
-  echo "${database}-a" |  xargs
-done
 for database in "${databases[@]}"
 do
   database=$(echo "${database}" | xargs)
