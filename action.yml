@@ -9,6 +9,10 @@ inputs:
     required: false
     description: 'Docker postgres image tag for available image tags please see https://hub.docker.com/_/postgres'
     default: 'latest'
+  postgres_image_name:
+    required: false
+    description: 'Docker postgres image name if not using https://hub.docker.com/_/postgres'
+    default: 'postgres'
   postgres_user:
     description: 'POSTGRES_USER - create the user with the superuser power'
     required: false

@@ -1,7 +1,8 @@
 
 ARG INPUT_POSTGRES_IMAGE_TAG=latest
+ARG INPUT_POSTGRES_IMAGE_NAME=postgres
 
-FROM postgres:$INPUT_POSTGRES_IMAGE_TAG as postgres
+FROM $INPUT_POSTGRES_IMAGE_NAME:$INPUT_POSTGRES_IMAGE_TAG as postgres
 
 COPY docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
 COPY common-functions.sh /usr/local/bin/common-functions.sh

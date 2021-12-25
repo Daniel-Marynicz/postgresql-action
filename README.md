@@ -13,6 +13,12 @@ Setups PostgreSQL database  with unprivileged postgres user and PostgreSQL exten
 [https://hub.docker.com/_/postgres](https://hub.docker.com/_/postgres)
 * Default value:  `latest`
 
+### `postgres_image_name`
+
+**Optional** Docker postgres image name if not using 
+[https://hub.docker.com/_/postgres](https://hub.docker.com/_/postgres)
+* Default value:  `postgres`
+
 ### `postgres_user` 
 
 * POSTGRES_USER - create the user with the superuser power
