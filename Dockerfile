@@ -1,4 +1,4 @@
-FROM docker:stable
+FROM docker:29
 
 RUN set -eux ; \
     apk add  --no-cache bash
